@@ -111,8 +111,11 @@
   /* ---------- beranda ---------- */
   pages.home = function () {
     var c = S.cfg, f = el('#hero-facts');
-    f.innerHTML = '<dt>' + B('Skema', 'Schemes') + '</dt><dd>' + DATA.skema.length + '</dd><dt>' + B('Biaya sertifikasi', 'Fee') + '</dt><dd>' + A.rupiah(c.biaya) + '</dd><dt>' + B('Masa berlaku sertifikat', 'Certificate validity') + '</dt><dd>' + B('3 tahun', '3 years') + '</dd>' +
-      (c.nomor_lisensi ? '<dt>' + B('Nomor lisensi BNSP', 'BNSP license no.') + '</dt><dd>' + esc(c.nomor_lisensi) + '</dd>' : '');
+    var lic = c.nomor_lisensi ? (c.lisensi_url ? '<a href="' + esc(c.lisensi_url) + '" target="_blank" rel="noopener">' + esc(c.nomor_lisensi) + '</a>' : esc(c.nomor_lisensi)) : '';
+    f.innerHTML = '<div class="stat"><b>' + DATA.skema.length + '</b><span>' + B('Skema sertifikasi', 'Schemes') + '</span></div>' +
+      '<div class="stat"><b>' + A.rupiah(c.biaya) + '</b><span>' + B('Biaya sertifikasi', 'Fee') + '</span></div>' +
+      '<div class="stat"><b>' + B('3 tahun', '3 years') + '</b><span>' + B('Masa berlaku sertifikat', 'Certificate validity') + '</span></div>' +
+      (lic ? '<div class="stat wide"><b>' + lic + '</b><span>' + B('Nomor lisensi BNSP (klik untuk verifikasi)', 'BNSP license no. (click to verify)') + '</span></div>' : '');
     var sk = el('#home-skema'); sk.innerHTML = DATA.skema.map(skemaCard).join(''); bindOpen(sk);
     renderJadwal(el('#home-jadwal'), 3, false);
     renderBerita(el('#home-berita'), 3);
@@ -125,7 +128,7 @@
   /* ---------- tentang ---------- */
   pages.tentang = function () {
     renderVisiMisi(el('#vm-sec'), el('#vm')); renderPengurus(el('#pengurus')); renderGaleri(el('#galeri'));
-    var c = S.cfg; el('#legal').innerHTML = '<dt>' + B('Nama lembaga', 'Name') + '</dt><dd>' + esc(c.nama_lsp) + '</dd><dt>' + B('Jenis', 'Type') + '</dt><dd>' + B('LSP Pihak Pertama (LSP P1)', 'First-party certification body (LSP P1)') + '</dd><dt>' + B('Nomor lisensi BNSP', 'BNSP license no.') + '</dt><dd>' + (c.nomor_lisensi ? esc(c.nomor_lisensi) : B('Akan dicantumkan', 'To be published')) + '</dd><dt>Email</dt><dd><a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a></dd><dt>Website</dt><dd>' + esc(c.website) + '</dd>';
+    var c = S.cfg; el('#legal').innerHTML = '<dt>' + B('Nama lembaga', 'Name') + '</dt><dd>' + esc(c.nama_lsp) + '</dd><dt>' + B('Jenis', 'Type') + '</dt><dd>' + B('LSP Pihak Pertama (LSP P1)', 'First-party certification body (LSP P1)') + '</dd><dt>' + B('Nomor lisensi BNSP', 'BNSP license no.') + '</dt><dd>' + (c.nomor_lisensi ? (c.lisensi_url ? '<a href="' + esc(c.lisensi_url) + '" target="_blank" rel="noopener">' + esc(c.nomor_lisensi) + '</a>' : esc(c.nomor_lisensi)) : B('Akan dicantumkan', 'To be published')) + '</dd><dt>Email</dt><dd><a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a></dd><dt>Website</dt><dd>' + esc(c.website) + '</dd>';
     var t = c.tentang_tambahan; if (t) el('#tambahan').innerHTML = '<p>' + B(esc(t), esc(c.tentang_tambahan_en || t)) + '</p>';
   };
 

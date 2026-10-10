@@ -109,11 +109,11 @@
   function footer() {
     var c = state.cfg;
     var ig = c.instagram_url ? '<a href="' + esc(c.instagram_url) + '" target="_blank" rel="noopener">Instagram ' + esc(c.instagram_nama) + '</a>' : 'Instagram: ' + esc(c.instagram_nama);
-    return '<footer class="site-footer"><div class="wrap"><div class="fcols"><div><div class="flogos"><img src="img/logo-umb.png" alt="UMB" height="40" width="40"><img src="img/logo-bnsp.png" alt="BNSP" height="40" width="40"></div>' +
+    return '<footer class="site-footer"><div class="wrap"><div class="fcols"><div><div class="flogos"><img src="img/logo-lsp-umb.png" alt="LSP UMB" height="48"><img src="img/logo-bnsp.png" alt="BNSP" height="48"></div>' +
       '<p><strong>' + esc(c.nama_lsp) + '</strong></p><p class="small">' + B('Lembaga Sertifikasi Profesi Pihak Pertama (LSP P1) di lingkungan Universitas Muhammadiyah Bengkulu.', 'First-party Professional Certification Body (LSP P1) of Universitas Muhammadiyah Bengkulu.') + '</p></div>' +
       '<div><h4>' + B('Informasi', 'Information') + '</h4><ul><li><a href="tentang.html">' + B('Tentang LSP', 'About') + '</a></li><li><a href="skema.html">' + B('Skema Sertifikasi', 'Certification Schemes') + '</a></li><li><a href="prosedur.html">' + B('Prosedur Pendaftaran', 'Registration Procedure') + '</a></li><li><a href="jadwal.html">' + B('Jadwal Uji Kompetensi', 'Exam Schedule') + '</a></li></ul></div>' +
       '<div><h4>' + B('Layanan', 'Services') + '</h4><ul><li><a href="daftar.html">' + B('Pendaftaran Sertifikasi', 'Apply for Certification') + '</a></li><li><a href="berita.html">' + B('Berita', 'News') + '</a></li><li><a href="kontak.html">' + B('Kontak', 'Contact') + '</a></li></ul></div>' +
-      '<div><h4>' + B('Kontak', 'Contact') + '</h4><ul><li><a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a></li><li>' + esc(c.website) + '</li><li>' + ig + '</li></ul></div></div>' +
+      '<div><h4>' + B('Kontak', 'Contact') + '</h4><ul><li><a href="mailto:' + esc(c.email) + '">' + esc(c.email) + '</a></li><li>' + esc(c.website) + '</li>' + (c.nomor_lisensi ? '<li>' + B('Lisensi BNSP: ', 'BNSP license: ') + (c.lisensi_url ? '<a href="' + esc(c.lisensi_url) + '" target="_blank" rel="noopener">' + esc(c.nomor_lisensi) + '</a>' : esc(c.nomor_lisensi)) + '</li>' : '') + '<li>' + ig + '</li></ul></div></div>' +
       '<div class="copy">© ' + new Date().getFullYear() + ' ' + esc(c.nama_lsp) + '. ' + B('Seluruh hak dilindungi.', 'All rights reserved.') + ' <a href="admin.html" rel="nofollow">Admin</a></div></div></footer>';
   }
   function mountLayout() {

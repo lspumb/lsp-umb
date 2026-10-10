@@ -58,9 +58,9 @@ h+=f'''<section class="hero"><div class="wrap"><div>
 <div class="eyebrow">{b("Lembaga Sertifikasi Profesi P1 · Berlisensi BNSP","First-party Certification Body · BNSP licensed")}</div>
 <h1>{b("Sertifikasi <em>kompetensi kerja</em> bagi mahasiswa Universitas Muhammadiyah Bengkulu","Professional <em>competency</em> certification for Universitas Muhammadiyah Bengkulu students")}</h1>
 {blk("LSP UMB menyelenggarakan uji kompetensi melalui 11 skema sertifikasi. Pelajari skema, cek kecocokannya dengan program studi Anda, lalu daftar secara daring.","LSP UMB runs competency tests through 11 certification schemes. Study the schemes, check which fit your study program, then register online.",'p','lead')}
-<div class="pills"><span class="pill">{b("Berlisensi BNSP","BNSP licensed")}</span><span class="pill">{b("11 skema sertifikasi","11 certification schemes")}</span><span class="pill">{b("Uji kompetensi di kampus","On-campus testing")}</span></div>
-<div class="actions"><a class="btn" href="daftar.html">{b("Daftar sekarang","Register now")}</a><a class="btn ghost" href="skema.html#cek">{b("Cek skema untuk prodi saya","Find schemes for my program")}</a></div></div>
-<aside class="hero-panel" aria-label="Ringkasan"><div class="logos"><img class="main" src="img/logo-lsp-umb.png" alt="LSP UMB" width="110" height="60"><img src="img/logo-umb.png" alt="Universitas Muhammadiyah Bengkulu" width="52" height="52"><img src="img/logo-bnsp.png" alt="BNSP" width="52" height="52"></div><dl id="hero-facts"></dl></aside></div></section>
+<div class="actions"><a class="btn" href="daftar.html">{b("Daftar sekarang","Register now")}</a><a class="btn ghost" href="skema.html#cek">{b("Cek skema untuk prodi saya","Find schemes for my program")}</a></div>
+<div class="stats" id="hero-facts" aria-label="Ringkasan"></div></div>
+<div class="hero-visual"><div class="hero-arch"><img src="img/gedung-umb.jpg" alt="Kampus Universitas Muhammadiyah Bengkulu" width="852" height="360"></div><div class="hero-logos"><img src="img/logo-lsp-umb.png" alt="LSP UMB" height="56"><img src="img/logo-bnsp.png" alt="BNSP" height="56"></div></div></div></section>
 
 <section class="alt" id="alur"><div class="wrap"><div class="sec-head"><div class="eyebrow">{b("Alur pendaftaran","How to register")}</div><h2>{b("Delapan langkah dari informasi sampai panggilan uji","Eight steps from information to your test call")}</h2></div>
 {steps_html()}

@@ -19,6 +19,7 @@ window.LSP_CONFIG = {
     jam_layanan: "Senin–Jumat, 08.00–14.00 WIB",
     maps_embed_url: "",
     nomor_lisensi: "BNSP-LSP-2797-ID",
+    lisensi_url: "https://bnsp.go.id/lsp/universitas-muhammadiyah-bengkulu",
     rekening_bank: "Bank Syariah Indonesia (BSI)",
     rekening_nomor: "7014809931",
     rekening_nama: "Universitas Muhammadiyah Bengkulu",
