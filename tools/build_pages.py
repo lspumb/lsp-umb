@@ -16,10 +16,10 @@ def head(page,title_id,title_en,desc,extra_css=''):
 <meta property="og:title" content="{title_id} | LSP UMB">
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="img/logo-lsp-umb.png">
-<meta name="theme-color" content="#2e6b4f">
+<meta name="theme-color" content="#1B0B4D">
 <link rel="icon" href="img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">{extra_css}
 </head>
 <body data-page="{page}" data-title-id="{title_id}" data-title-en="{title_en}">
@@ -56,10 +56,11 @@ def steps_html(detail=True):
 h=head('home','Beranda','Home','Lembaga Sertifikasi Profesi Universitas Muhammadiyah Bengkulu. Informasi skema, pendaftaran, dan jadwal uji kompetensi.')
 h+=f'''<section class="hero"><div class="wrap"><div>
 <div class="eyebrow">{b("Lembaga Sertifikasi Profesi P1 · Berlisensi BNSP","First-party Certification Body · BNSP licensed")}</div>
-<h1>{b("Sertifikasi kompetensi kerja bagi mahasiswa Universitas Muhammadiyah Bengkulu","Professional competency certification for Universitas Muhammadiyah Bengkulu students")}</h1>
+<h1>{b("Sertifikasi <em>kompetensi kerja</em> bagi mahasiswa Universitas Muhammadiyah Bengkulu","Professional <em>competency</em> certification for Universitas Muhammadiyah Bengkulu students")}</h1>
 {blk("LSP UMB menyelenggarakan uji kompetensi melalui 11 skema sertifikasi. Pelajari skema, cek kecocokannya dengan program studi Anda, lalu daftar secara daring.","LSP UMB runs competency tests through 11 certification schemes. Study the schemes, check which fit your study program, then register online.",'p','lead')}
+<div class="pills"><span class="pill">{b("Berlisensi BNSP","BNSP licensed")}</span><span class="pill">{b("11 skema sertifikasi","11 certification schemes")}</span><span class="pill">{b("Uji kompetensi di kampus","On-campus testing")}</span></div>
 <div class="actions"><a class="btn" href="daftar.html">{b("Daftar sekarang","Register now")}</a><a class="btn ghost" href="skema.html#cek">{b("Cek skema untuk prodi saya","Find schemes for my program")}</a></div></div>
-<aside class="hero-panel" aria-label="Ringkasan"><dl id="hero-facts"></dl><div class="logos"><img src="img/logo-umb.png" alt="Universitas Muhammadiyah Bengkulu" width="46" height="46"><img src="img/logo-bnsp.png" alt="BNSP" width="46" height="46"></div></aside></div></section>
+<aside class="hero-panel" aria-label="Ringkasan"><div class="logos"><img class="main" src="img/logo-lsp-umb.png" alt="LSP UMB" width="110" height="60"><img src="img/logo-umb.png" alt="Universitas Muhammadiyah Bengkulu" width="52" height="52"><img src="img/logo-bnsp.png" alt="BNSP" width="52" height="52"></div><dl id="hero-facts"></dl></aside></div></section>
 
 <section class="alt" id="alur"><div class="wrap"><div class="sec-head"><div class="eyebrow">{b("Alur pendaftaran","How to register")}</div><h2>{b("Delapan langkah dari informasi sampai panggilan uji","Eight steps from information to your test call")}</h2></div>
 {steps_html()}
@@ -85,7 +86,7 @@ h+=f'''<section class="hero"><div class="wrap"><div>
 
 <section class="alt"><div class="wrap"><div class="sec-head"><div class="eyebrow">{b("Galeri","Gallery")}</div><h2>{b("Dokumentasi kegiatan","Activity photos")}</h2></div><div id="home-galeri"></div></div></section>
 
-<section><div class="wrap"><div class="card" style="display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center"><div><h3 style="margin:0">{b("Ada pertanyaan tentang pendaftaran?","Questions about registration?")}</h3><p class="muted" style="margin:.3em 0 0">{b("Hubungi Admin LSP UMB melalui email atau kunjungi kantor kami.","Contact the LSP UMB admin by email or visit our office.")}</p></div><a class="btn" href="kontak.html">{b("Kontak","Contact")}</a></div></div></section>
+<section><div class="wrap"><div class="cta-band"><div><h3>{b("Ada pertanyaan tentang pendaftaran?","Questions about registration?")}</h3><p>{b("Hubungi Admin LSP UMB melalui email atau kunjungi kantor kami.","Contact the LSP UMB admin by email or visit our office.")}</p></div><a class="btn" href="kontak.html">{b("Kontak","Contact")}</a></div></div></section>
 '''
 h+=foot([])
 write('index.html',h)
@@ -132,7 +133,7 @@ h+=f'''<section><div class="wrap"><div class="sec-head"><h2>{b("Alur pendaftaran
 <h3>{b("Persyaratan dasar","Basic requirements")}</h3><ul><li>{b("Mahasiswa aktif Universitas Muhammadiyah Bengkulu semester VII.","Active Universitas Muhammadiyah Bengkulu student in semester VII.")}</li><li>{b("Telah menyelesaikan mata kuliah yang ditentukan skema.","Has completed the courses specified by the scheme.")}</li><li>{b("Telah menyelesaikan magang/praktik kerja lapangan pada bidang skema.","Has completed an internship / field practice in the scheme's field.")}</li></ul>
 {blk("Mata kuliah dan bidang magang berbeda pada tiap skema. Lihat persyaratan lengkap pada halaman Skema.","Required courses and internship fields differ per scheme. See the Schemes page for the full requirements.",'p','small muted')}
 <h3>{b("Berkas yang diserahkan","Documents to submit")}</h3><ul><li>FR.APL.01 {b("dan","and")} FR.APL.02 {b("(dicetak dari situs ini)","(printed from this site)")}</li><li>{b("Fotokopi KTP","Photocopy of national ID (KTP)")}</li><li>{b("Fotokopi Kartu Tanda Mahasiswa (KTM)","Photocopy of student card (KTM)")}</li><li>{b("Fotokopi transkrip nilai sementara semester 1–6 yang memuat mata kuliah syarat skema","Photocopy of provisional transcript, semesters 1–6, showing the scheme's required courses")}</li><li>{b("Fotokopi sertifikat atau surat keterangan telah menyelesaikan magang/PKL pada bidang skema","Photocopy of internship / field practice certificate or statement in the scheme's field")}</li><li>{b("Slip pembayaran uji kompetensi","Payment slip for the competency test")}</li><li>{b("Pasfoto 3x4 latar belakang merah, 3 lembar","Three 3x4 passport photos, red background")}</li></ul></div>
-<div><h2>{b("Biaya dan pembayaran","Fee and payment")}</h2>{blk("Biaya sertifikasi ditetapkan sesuai kebijakan Universitas Muhammadiyah Bengkulu.","The certification fee is set by Universitas Muhammadiyah Bengkulu policy.")}<p style="font:600 2rem 'Source Serif 4',serif;margin:.2em 0" id="biaya"></p><div id="rekening"></div><div id="kantor" style="margin-top:12px"></div>
+<div><h2>{b("Biaya dan pembayaran","Fee and payment")}</h2>{blk("Biaya sertifikasi ditetapkan sesuai kebijakan Universitas Muhammadiyah Bengkulu.","The certification fee is set by Universitas Muhammadiyah Bengkulu policy.")}<p style="font:800 2.2rem var(--font-d);color:var(--v700);margin:.2em 0" id="biaya"></p><div id="rekening"></div><div id="kantor" style="margin-top:12px"></div>
 {blk("Simpan bukti pembayaran dan serahkan bersama berkas ke Kantor LSP UMB.","Keep your receipt and submit it with your documents at the LSP UMB office.",'p','small muted')}
 <h3 style="margin-top:26px">{b("Siapa yang dapat mendaftar?","Who can apply?")}</h3>{blk("Setiap skema membatasi program studi tertentu. Skema Kewirausahaan Industri terbuka untuk semua program studi.","Each scheme is limited to specific study programs. The Industrial Entrepreneurship scheme is open to all programs.")}<p><a href="skema.html#cek">{b("Cek skema untuk prodi saya →","Find schemes for my program →")}</a></p></div></div></div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{b("Setelah berkas diterima","After your documents are accepted")}</h2></div><ol class="steps cols">
@@ -203,7 +204,7 @@ h+=f'''<section><div class="wrap" style="max-width:860px">
 {fld('telpKantor','Telepon kantor (opsional)','Office phone (optional)','tel')}
 <div class="field full"><label for="pendidikan">{b("Kualifikasi pendidikan","Education qualification")}</label><input id="pendidikan" name="pendidikan" type="text"><span class="hint">{b("Terisi otomatis dari program studi. Boleh diubah.","Filled from your study program. You may edit it.")}</span></div></div></div>
 
-<details class="form-card" open><summary style="cursor:pointer"><span style="font:600 1.25rem 'Source Serif 4',serif">{b("3. Data pekerjaan sekarang","3. Current employment")}</span></summary><p class="sub" style="margin-top:8px">{b("Sesuai FR.APL.01 bagian 1b. Bagi mahasiswa terisi bawaan; ubah bila Anda bekerja.","As in FR.APL.01 part 1b. Prefilled for students; change it if you work.")}</p><div class="fgrid">
+<details class="form-card" open><summary style="cursor:pointer"><span style="font:800 1.3rem var(--font-d)">{b("3. Data pekerjaan sekarang","3. Current employment")}</span></summary><p class="sub" style="margin-top:8px">{b("Sesuai FR.APL.01 bagian 1b. Bagi mahasiswa terisi bawaan; ubah bila Anda bekerja.","As in FR.APL.01 part 1b. Prefilled for students; change it if you work.")}</p><div class="fgrid">
 {fld('institusi','Nama institusi / perusahaan','Institution / company','text',False,True,None,'value="Universitas Muhammadiyah Bengkulu"')}
 {fld('jabatan','Jabatan','Position','text',False,False,None,'value="Mahasiswa"')}
 {fld('kodeposKantor','Kode pos kantor','Office postal code')}

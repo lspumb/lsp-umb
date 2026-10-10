@@ -11,6 +11,7 @@ Perkiraan waktu: 45 sampai 60 menit untuk pemasangan awal. Anda tidak perlu menu
 | `admin.html` | Dashboard admin (jadwal, lokasi, berita, pengaturan, pendaftar) |
 | `js/config.js` | **Satu-satunya file yang Anda ubah di sisi website** (alamat API) |
 | `gas/Code.gs` | Kode backend Google Apps Script |
+| `fonts/` | Font Bricolage Grotesque dan Plus Jakarta Sans (disimpan lokal, sama dengan situs B-ICON) |
 | `docs/` | 11 PDF dokumen skema (bisa diunduh dari halaman skema) |
 | `blogspot/tempel-di-tema-blogspot.html` | Kode yang ditempel di tema Blogspot (bingkai) |
 | `tools/CNAME-untuk-nanti.txt` | Disimpan untuk saat domain `lsp.umb.ac.id` kelak dipindah ke GitHub Pages |
@@ -62,11 +63,15 @@ Perilaku yang perlu Anda tahu (hasil uji saya):
 - Google tidak akan mengindeks isi situs, karena isinya ada di bingkai. Untuk sosialisasi ke mahasiswa ini tidak masalah.
 - Saya belum bisa menguji langsung di Blogspot dan di iPhone. [Kemungkinan Besar] GitHub Pages boleh dibingkai (tidak mengirim pembatas bingkai). Bila bingkai kosong, pakai cadangan di bawah.
 
-**Cadangan bila bingkai gagal: pengalihan.** Ganti isi tempelan dengan dua baris ini (alamat berubah ke github.io saat dibuka):
+**Cadangan bila bingkai gagal: pengalihan.** Ganti isi tempelan dengan blok ini (tag `meta` harus ditutup `/>` dan skrip dibungkus CDATA, karena Blogger memeriksa tema sebagai XML) (alamat berubah ke github.io saat dibuka):
 
 ```html
-<meta http-equiv="refresh" content="0;url=https://NAMA-AKUN.github.io/lsp-umb/">
-<script>location.replace("https://NAMA-AKUN.github.io/lsp-umb/");</script>
+<meta content='0;url=https://NAMA-AKUN.github.io/lsp-umb/' http-equiv='refresh'/>
+<script>
+//<![CDATA[
+location.replace('https://NAMA-AKUN.github.io/lsp-umb/');
+//]]>
+</script>
 ```
 
 **Untuk membatalkan:** Tema > Pulihkan dari cadangan.

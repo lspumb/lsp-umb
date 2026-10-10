@@ -2,7 +2,7 @@
    API_URL : isi dengan URL "Web app" hasil Deploy Google Apps Script (berakhiran /exec).
              Selama kosong, situs tetap tampil (data bawaan), pendaftaran tidak tersimpan ke Sheet. */
 window.LSP_CONFIG = {
-  API_URL: "https://script.google.com/macros/s/AKfycbxow502-nQrrDuecQSeuAVwVjqS6vtAqSXE4ELiCVyGE8PO89xLJlTeV5rfT9_8YfFs/exec",
+  API_URL: "",
   CACHE_SECONDS: 120,
 
   /* Data bawaan. Nilai di Google Sheet (tab Config) selalu menimpa nilai di bawah ini. */
@@ -12,7 +12,7 @@ window.LSP_CONFIG = {
     email: "lsp@umb.ac.id",
     website: "lsp.umb.ac.id",
     instagram_nama: "LSP UMB",
-    instagram_url: "https://www.instagram.com/lspumbengkulu/",
+    instagram_url: "",
     telepon: "",
     whatsapp: "+6289699449949",
     alamat_kantor: "Lantai Dasar Masjid At-Tanwir, Kampus IV Universitas Muhammadiyah Bengkulu, Jl. H. Adam Malik, Kelurahan Cempaka Permai, Kecamatan Gading Cempaka, Kota Bengkulu",
