@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id" data-lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pendaftaran | LSP UMB</title>
+<meta name="description" content="Formulir pendaftaran sertifikasi kompetensi LSP UMB berdasarkan FR.APL.01.">
+<meta property="og:title" content="Pendaftaran | LSP UMB">
+<meta property="og:description" content="Formulir pendaftaran sertifikasi kompetensi LSP UMB berdasarkan FR.APL.01.">
+<meta property="og:image" content="img/logo-lsp-umb.png">
+<meta name="theme-color" content="#2e6b4f">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="daftar" data-title-id="Pendaftaran" data-title-en="Registration">
+<div id="site-header"></div>
+<main id="main">
+<div class="page-head"><div class="wrap"><div class="crumbs"><a href="index.html"><span data-l="id">Beranda</span><span data-l="en">Home</span></a> / <span data-l="id">Pendaftaran</span><span data-l="en">Registration</span></div><h1><span data-l="id">Pendaftaran sertifikasi</span><span data-l="en">Certification registration</span></h1><p data-l="id">Isi data sesuai KTP dan dokumen asli. Setelah dikirim, FR.APL.01 dan FR.APL.02 akan tampil dalam keadaan sudah terisi.</p><p data-l="en">Fill in data exactly as on your ID and original documents. After submitting, FR.APL.01 and FR.APL.02 appear already filled in.</p></div></div>
+<section><div class="wrap" style="max-width:860px">
+<div id="closed" class="alert warn" style="display:none"><span data-l="id">Pendaftaran sedang ditutup. Silakan pantau halaman Jadwal atau hubungi Admin LSP UMB.</span><span data-l="en">Registration is currently closed. Check the Schedule page or contact the LSP UMB admin.</span></div>
+<form id="f" novalidate autocomplete="on">
+<div class="form-card"><h2><span data-l="id">1. Pilih skema</span><span data-l="en">1. Choose a scheme</span></h2><p class="sub"><span data-l="id">Hanya skema sesuai program studi Anda yang dapat dipilih.</span><span data-l="en">Only schemes matching your study program are accepted.</span></p><div class="fgrid">
+<div class="field full"><label for="skema" class="req"><span data-l="id">Skema sertifikasi</span><span data-l="en">Certification scheme</span></label><select id="skema" name="skema"></select><div class="skema-info" id="skema-info" style="display:none"></div></div>
+<div class="field"><label for="prodi" class="req"><span data-l="id">Program studi</span><span data-l="en">Study program</span></label><select id="prodi" name="prodi"></select></div>
+<div class="field" id="prodi_lain_wrap" style="display:none"><label for="prodi_lain"><span data-l="id">Nama program studi</span><span data-l="en">Study program name</span></label><input id="prodi_lain" type="text"></div>
+<div class="field"><label for="nim" class="req">NIM</label><input id="nim" name="nim" type="text" inputmode="numeric" autocomplete="off"></div>
+<div class="field"><label for="semester" class="req"><span data-l="id">Semester saat ini</span><span data-l="en">Current semester</span></label><select id="semester" name="semester"><option value="">—</option><option value="bawah"><span data-l="id">Di bawah VII</span><span data-l="en">Below VII</span></option><option value="VII">VII</option><option value="VIII">VIII</option><option value="IX">IX</option><option value="X atau lebih"><span data-l="id">X atau lebih</span><span data-l="en">X or above</span></option></select></div>
+<div class="field full"><div id="elig" class="alert bad" style="display:none"></div></div></div></div>
+
+<div class="form-card"><h2><span data-l="id">2. Data pribadi</span><span data-l="en">2. Personal data</span></h2><p class="sub"><span data-l="id">Sesuai isian FR.APL.01 bagian 1.</span><span data-l="en">As in FR.APL.01 part 1.</span></p><div class="fgrid">
+<div class="field full"><label for="nama" class="req"><span data-l="id">Nama lengkap</span><span data-l="en">Full name</span></label><input id="nama" name="nama" type="text" autocomplete="name"></div>
+<div class="field"><label for="nik" class="req"><span data-l="id">No. KTP / NIK</span><span data-l="en">National ID (NIK)</span></label><input id="nik" name="nik" type="text" inputmode="numeric" maxlength="16" autocomplete="off"><span class="hint"><span data-l="id">16 digit angka</span><span data-l="en">16 digits</span></span></div>
+<div class="field"><span class="lbl req"><span data-l="id">Jenis kelamin</span><span data-l="en">Gender</span></span><div class="radios"><label><input type="radio" id="jk-l" name="jk" value="L"> <span data-l="id">Laki-laki</span><span data-l="en">Male</span></label><label><input type="radio" name="jk" value="P"> <span data-l="id">Wanita</span><span data-l="en">Female</span></label></div></div>
+<div class="field"><label for="tempat" class="req"><span data-l="id">Tempat lahir</span><span data-l="en">Place of birth</span></label><input id="tempat" name="tempat" type="text" ></div>
+<div class="field"><label for="tgl" class="req"><span data-l="id">Tanggal lahir</span><span data-l="en">Date of birth</span></label><input id="tgl" name="tgl" type="date" ></div>
+<div class="field"><label for="kebangsaan"><span data-l="id">Kebangsaan</span><span data-l="en">Nationality</span></label><input id="kebangsaan" name="kebangsaan" type="text" value="Indonesia"></div>
+<div class="field full"><label for="alamat" class="req"><span data-l="id">Alamat rumah</span><span data-l="en">Home address</span></label><textarea id="alamat" name="alamat" rows="2" autocomplete="street-address"></textarea></div>
+<div class="field"><label for="kodepos"><span data-l="id">Kode pos</span><span data-l="en">Postal code</span></label><input id="kodepos" name="kodepos" type="text" inputmode="numeric" autocomplete="postal-code"></div>
+<div class="field"><label for="hp" class="req"><span data-l="id">No. HP / WhatsApp</span><span data-l="en">Mobile / WhatsApp</span></label><input id="hp" name="hp" type="tel" autocomplete="tel"></div>
+<div class="field"><label for="email" class="req"><span data-l="id">Email</span><span data-l="en">Email</span></label><input id="email" name="email" type="email" autocomplete="email"></div>
+<div class="field"><label for="telpRumah"><span data-l="id">Telepon rumah (opsional)</span><span data-l="en">Home phone (optional)</span></label><input id="telpRumah" name="telpRumah" type="tel" ></div>
+<div class="field"><label for="telpKantor"><span data-l="id">Telepon kantor (opsional)</span><span data-l="en">Office phone (optional)</span></label><input id="telpKantor" name="telpKantor" type="tel" ></div>
+<div class="field full"><label for="pendidikan"><span data-l="id">Kualifikasi pendidikan</span><span data-l="en">Education qualification</span></label><input id="pendidikan" name="pendidikan" type="text"><span class="hint"><span data-l="id">Terisi otomatis dari program studi. Boleh diubah.</span><span data-l="en">Filled from your study program. You may edit it.</span></span></div></div></div>
+
+<details class="form-card" open><summary style="cursor:pointer"><span style="font:600 1.25rem 'Source Serif 4',serif"><span data-l="id">3. Data pekerjaan sekarang</span><span data-l="en">3. Current employment</span></span></summary><p class="sub" style="margin-top:8px"><span data-l="id">Sesuai FR.APL.01 bagian 1b. Bagi mahasiswa terisi bawaan; ubah bila Anda bekerja.</span><span data-l="en">As in FR.APL.01 part 1b. Prefilled for students; change it if you work.</span></p><div class="fgrid">
+<div class="field full"><label for="institusi"><span data-l="id">Nama institusi / perusahaan</span><span data-l="en">Institution / company</span></label><input id="institusi" name="institusi" type="text" value="Universitas Muhammadiyah Bengkulu"></div>
+<div class="field"><label for="jabatan"><span data-l="id">Jabatan</span><span data-l="en">Position</span></label><input id="jabatan" name="jabatan" type="text" value="Mahasiswa"></div>
+<div class="field"><label for="kodeposKantor"><span data-l="id">Kode pos kantor</span><span data-l="en">Office postal code</span></label><input id="kodeposKantor" name="kodeposKantor" type="text" ></div>
+<div class="field full"><label for="alamatKantor"><span data-l="id">Alamat kantor</span><span data-l="en">Office address</span></label><textarea id="alamatKantor" rows="2"></textarea></div>
+<div class="field"><label for="telpInstitusi"><span data-l="id">Telepon</span><span data-l="en">Phone</span></label><input id="telpInstitusi" name="telpInstitusi" type="tel" ></div><div class="field"><label for="fax"><span data-l="id">Fax</span><span data-l="en">Fax</span></label><input id="fax" name="fax" type="text" ></div><div class="field"><label for="emailInstitusi"><span data-l="id">Email institusi</span><span data-l="en">Institution email</span></label><input id="emailInstitusi" name="emailInstitusi" type="email" ></div></div></details>
+
+<div class="form-card"><div class="check"><input type="checkbox" id="setuju"><label for="setuju"><span data-l="id">Saya menyatakan data di atas benar, dan setuju memenuhi persyaratan sertifikasi serta memberikan informasi yang diperlukan untuk penilaian. Data saya dipakai LSP UMB hanya untuk keperluan sertifikasi.</span><span data-l="en">I declare the data above is true, agree to meet certification requirements and provide information needed for assessment. LSP UMB uses my data only for certification purposes.</span></label></div>
+<div class="hp" aria-hidden="true"><label>Website <input type="text" id="website" tabindex="-1" autocomplete="off"></label></div>
+<div id="form-msg" role="status" aria-live="polite" style="margin-top:14px"></div>
+<p style="margin:16px 0 0"><button type="submit" class="btn" id="submit"><span data-l="id">Kirim dan buat FR.APL.01 & FR.APL.02</span><span data-l="en">Submit and generate FR.APL.01 & FR.APL.02</span></button></p></div>
+</form></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/config.js"></script>
+<script src="data/skema.js"></script>
+<script src="data/elemen.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/daftar.js"></script>
+</body>
+</html>

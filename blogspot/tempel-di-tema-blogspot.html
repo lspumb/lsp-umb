@@ -1,0 +1,39 @@
+<!-- ============================================================
+  LSP UMB: tampilkan situs GitHub Pages di dalam lsp.umb.ac.id (Blogspot)
+  CARA PAKAI:
+  1. Ganti SEMUA tulisan  NAMA-AKUN  di bawah dengan nama akun GitHub Anda (huruf kecil).
+  2. Blogspot > Tema > panah di samping "Sesuaikan" > Edit HTML.
+  3. Cari baris  <head>  lalu tempel seluruh blok di bawah ini TEPAT di bawahnya.
+  4. Simpan. Buka lsp.umb.ac.id (jendela penyamaran).
+  Baris //<![CDATA[ dan //]]> wajib ada (aturan XML Blogger). Jangan dihapus.
+============================================================= -->
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<script type='text/javascript'>
+//<![CDATA[
+(function () {
+  var BASE = 'https://NAMA-AKUN.github.io/lsp-umb/';
+  var ok = /^[a-z0-9-]+\.html(#[\w-]*)?$/i;
+  var h = location.hash.replace(/^#/, '');
+  var start = (h && ok.test(h)) ? h : '';
+  document.documentElement.style.cssText = 'height:100%;margin:0;overflow:hidden';
+  function mount() {
+    document.body.innerHTML = '';
+    document.body.style.cssText = 'margin:0;padding:0;height:100%;overflow:hidden;background:#f6f4ee';
+    var f = document.createElement('iframe');
+    f.src = BASE + start;
+    f.title = 'LSP UMB';
+    f.setAttribute('style', 'position:fixed;top:0;left:0;width:100%;height:100%;border:0');
+    f.setAttribute('allow', 'clipboard-write');
+    document.body.appendChild(f);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mount); else mount();
+  window.addEventListener('message', function (e) {
+    if (e.origin !== new URL(BASE).origin) return;
+    var d = e.data;
+    if (d && typeof d.lsp === 'string' && ok.test(d.lsp)) {
+      history.replaceState(null, '', d.lsp === 'index.html' ? location.pathname : '#' + d.lsp);
+    }
+  });
+})();
+//]]>
+</script>

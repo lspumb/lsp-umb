@@ -1,0 +1,12 @@
+.apl-doc{font-family:Arial,Helvetica,sans-serif;font-size:10.5pt;color:#000;background:#fff;line-height:1.35}
+.apl-doc p{margin:.55em 0 .3em}
+.apl-title{font:700 13pt Arial,sans-serif;margin:0 0 .8em;color:#000}
+.apl-table{border-collapse:collapse;width:100%;table-layout:fixed;margin:.25em 0}
+.apl-table td{border:1px solid #000;padding:3px 6px;vertical-align:top;word-wrap:break-word}
+.apl-table td.h{background:#e7e6e6}.apl-table td.c{text-align:center}
+.apl-table tr{break-inside:avoid}.apl-table.keep{break-inside:avoid}
+.apl-gap{margin:.2em 0}
+.apl-foot{font-size:7pt;color:#666;margin-top:1.2em}
+.apl-sheet{background:#fff;border:1px solid var(--line,#ddd);padding:20px;margin-bottom:22px;overflow-x:auto}
+.apl-sheet .apl-doc{min-width:640px}
+@media print{.apl-sheet{border:0;padding:0;margin:0;page-break-after:always}.apl-doc{font-size:10pt}@page{size:A4;margin:18mm}}

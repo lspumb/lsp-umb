@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="id" data-lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin | LSP UMB</title>
+<meta name="description" content="Dashboard admin LSP UMB.">
+<meta property="og:title" content="Admin | LSP UMB">
+<meta property="og:description" content="Dashboard admin LSP UMB.">
+<meta property="og:image" content="img/logo-lsp-umb.png">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#2e6b4f">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="admin" data-title-id="Admin" data-title-en="Admin">
+<div id="site-header"></div>
+<main id="main">
+<section><div class="wrap" style="max-width:1000px">
+<div id="a-login" style="max-width:420px;margin:30px auto"><div class="form-card"><h2>Dashboard admin LSP UMB</h2><p class="sub">Masukkan passcode admin.</p><form id="a-login-form"><div class="field"><label for="a-pass">Passcode</label><input id="a-pass" type="password" autocomplete="current-password" required></div><p id="a-lmsg" class="err" role="alert"></p><p style="margin:12px 0 0"><button class="btn" id="a-go" type="submit">Masuk</button></p></form></div></div>
+<div id="a-app" style="display:none"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><h1 style="font-size:1.6rem;margin:0">Dashboard admin</h1><button class="btn ghost small" id="a-out">Keluar</button></div>
+<div class="toolbar" id="a-tabs" style="margin-top:18px"></div><div id="a-msg" class="alert info" style="display:none" role="status"></div>
+<div style="display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:14px"><div><h2 id="a-title" style="margin:0"></h2><p class="muted small" id="a-hint" style="margin:.2em 0 0"></p></div><div style="display:flex;gap:8px"><button class="btn ghost small" id="a-csv">Unduh CSV</button><button class="btn small" id="a-add">Tambah</button></div></div>
+<div id="a-table"></div><dialog id="a-dlg"></dialog></div></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/config.js"></script>
+<script src="data/skema.js"></script>
+<script src="data/elemen.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id" data-lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skema Sertifikasi | LSP UMB</title>
+<meta name="description" content="11 skema sertifikasi LSP UMB: unit kompetensi, persyaratan, dan program studi yang dapat mendaftar.">
+<meta property="og:title" content="Skema Sertifikasi | LSP UMB">
+<meta property="og:description" content="11 skema sertifikasi LSP UMB: unit kompetensi, persyaratan, dan program studi yang dapat mendaftar.">
+<meta property="og:image" content="img/logo-lsp-umb.png">
+<meta name="theme-color" content="#2e6b4f">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="skema" data-title-id="Skema Sertifikasi" data-title-en="Certification Schemes">
+<div id="site-header"></div>
+<main id="main">
+<div class="page-head"><div class="wrap"><div class="crumbs"><a href="index.html"><span data-l="id">Beranda</span><span data-l="en">Home</span></a> / <span data-l="id">Skema</span><span data-l="en">Schemes</span></div><h1><span data-l="id">Skema sertifikasi</span><span data-l="en">Certification schemes</span></h1><p data-l="id">Pilih skema, lihat unit kompetensi dan persyaratannya, atau cek skema yang cocok untuk program studi Anda.</p><p data-l="en">Browse schemes, see their units and requirements, or check which fit your study program.</p></div></div>
+<section id="cek" style="padding-bottom:20px"><div class="wrap"><div class="checker"><h2 style="font-size:1.3rem;margin-bottom:.2em"><span data-l="id">Cek skema untuk program studi Anda</span><span data-l="en">Find schemes for your study program</span></h2><p class="small muted" data-l="id">Pilih program studi untuk melihat skema yang dapat diambil. Klik skema untuk membaca persyaratannya.</p><p class="small muted" data-l="en">Select your study program to see the schemes you can take. Click a scheme to read its requirements.</p>
+<div class="row"><label for="prodi-sel" class="sr" style="position:absolute;left:-9999px"><span data-l="id">Program studi</span><span data-l="en">Study program</span></label><select id="prodi-sel"></select></div><div class="result" id="prodi-result" aria-live="polite"></div></div></div></section>
+<section style="padding-top:30px"><div class="wrap"><div class="sec-head"><h2><span data-l="id">Semua skema</span><span data-l="en">All schemes</span></h2></div>
+<div class="toolbar"><button class="chip" data-f="all" aria-pressed="true"><span data-l="id">Semua</span><span data-l="en">All</span></button><button class="chip" data-f="Klaster" aria-pressed="false">Klaster</button><button class="chip" data-f="Okupasi" aria-pressed="false">Okupasi</button><button class="chip" data-f="KKNI" aria-pressed="false">KKNI</button>
+<input id="q" type="search" style="max-width:280px;margin-left:auto" data-ph-id="Cari skema atau prodi…" data-ph-en="Search scheme or program…" placeholder="Cari skema atau prodi…" aria-label="Cari"></div>
+<div class="grid g3" id="skema-list"></div></div></section>
+<section class="alt"><div class="wrap"><div class="sec-head"><h2><span data-l="id">Skema dan program studi yang dapat mendaftar</span><span data-l="en">Schemes and eligible study programs</span></h2><p class="muted" data-l="id">Ringkasan berikut mengikuti bagian persyaratan dasar pada dokumen skema resmi.</p><p class="muted" data-l="en">The summary below follows the basic requirements section of each official scheme document.</p></div><div class="tbl-wrap" id="matrix"></div>
+<h3 style="margin-top:34px"><span data-l="id">Jenis skema</span><span data-l="en">Scheme types</span></h3><div class="grid g3"><div class="card"><span class="tag">Klaster</span><p class="small" data-l="id">Gabungan beberapa unit kompetensi dari suatu okupasi atau bidang pekerjaan.</p><p class="small" data-l="en">A group of units of competency drawn from an occupation or field of work.</p></div><div class="card"><span class="tag okupasi">Okupasi</span><p class="small" data-l="id">Seluruh unit kompetensi yang membentuk satu jabatan atau okupasi.</p><p class="small" data-l="en">All units of competency that make up one job or occupation.</p></div><div class="card"><span class="tag kkni">KKNI</span><p class="small" data-l="id">Skema berbasis jenjang kualifikasi pada Kerangka Kualifikasi Nasional Indonesia.</p><p class="small" data-l="en">Scheme based on a qualification level of the Indonesian Qualifications Framework.</p></div></div></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/config.js"></script>
+<script src="data/skema.js"></script>
+<script src="data/elemen.js"></script>
+<script src="js/app.js"></script>
+<script src="js/pages.js"></script>
+</body>
+</html>
