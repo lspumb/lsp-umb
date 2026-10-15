@@ -2,7 +2,7 @@
    API_URL : isi dengan URL "Web app" hasil Deploy Google Apps Script (berakhiran /exec).
              Selama kosong, situs tetap tampil (data bawaan), pendaftaran tidak tersimpan ke Sheet. */
 window.LSP_CONFIG = {
-  API_URL: "",
+  API_URL: "https://script.google.com/macros/s/AKfycbxow502-nQrrDuecQSeuAVwVjqS6vtAqSXE4ELiCVyGE8PO89xLJlTeV5rfT9_8YfFs/exec",
   CACHE_SECONDS: 120,
 
   /* Data bawaan. Nilai di Google Sheet (tab Config) selalu menimpa nilai di bawah ini. */
